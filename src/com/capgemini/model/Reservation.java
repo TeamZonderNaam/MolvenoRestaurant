@@ -5,9 +5,7 @@ import java.time.LocalDateTime;
 public class Reservation {
     //een reservering heeft klantgegevens, aantal personen, een tafelnummer, kinderzitjes nodig, parkeerplaats nodig en een tijd (begintijd en tijdsduur)
 
-    private String custName;
-    private String custPhoneNumber;
-    private String custEmailAddress;
+    private Customer customer;
     private boolean parkingSpaceNeeded;
     private int numberOfChildSeats;
     private int numberOfPersons;
@@ -15,28 +13,12 @@ public class Reservation {
     private LocalDateTime startReservation;
     private int totalTimeInMinutes;
 
-    public String getCustName() {
-        return custName;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setCustName(String custName) {
-        this.custName = custName;
-    }
-
-    public String getCustPhoneNumber() {
-        return custPhoneNumber;
-    }
-
-    public void setCustPhoneNumber(String custPhoneNumber) {
-        this.custPhoneNumber = custPhoneNumber;
-    }
-
-    public String getCustEmailAddress() {
-        return custEmailAddress;
-    }
-
-    public void setCustEmailAddress(String custEmailAddress) {
-        this.custEmailAddress = custEmailAddress;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public boolean isParkingSpaceNeeded() {
