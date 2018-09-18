@@ -14,12 +14,13 @@ public class Table {
         return status;
     }
 
+    //eventually reserve should return a boolean value, expressing if the guest is allowed to reserve the table
     public void reserveTable () {
         if (this.status == TableStatus.AVAILABLE) {
             this.status = TableStatus.BOOKED;
         }
         else {
-            System.out.println("This table is not available");
+            System.out.println("This table is not available.");
         }
     }
 
