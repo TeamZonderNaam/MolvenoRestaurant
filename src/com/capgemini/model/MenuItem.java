@@ -1,12 +1,16 @@
 package com.capgemini.model;
 
 public class MenuItem {
-    public MenuItem() {
-    }
 
     private String name;
-    private int price;
+    private double price;
     private int number;
+
+    public MenuItem(String name, double price, int number) {
+        this.name = name;
+        this.price = price;
+        this.number = number;
+    }
 
     public String getName() {
         return name;
@@ -16,7 +20,7 @@ public class MenuItem {
         this.name = name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
