@@ -4,10 +4,9 @@ import java.util.Scanner;
 
 import java.sql.SQLOutput;
 
-public class StartMenu {
+public class Guest extends View{
 
-    public void show() {
-        Scanner inputScanner = new Scanner(System.in);
+    public void show(Scanner scanner) {
         Boolean finished = false;
         String selection;
         do {
@@ -16,16 +15,16 @@ public class StartMenu {
             System.out.println("2 - Reserve a table");
             System.out.println("3 - Login");
             System.out.println("4 - Register");
-            System.out.println("5 - Exit\n");
+            System.out.println("5 - Back\n");
 
-            selection = inputScanner.next();
+            selection = scanner.next();
 
-            finished = inputHandler(selection);
+            finished = guestHandler(selection, scanner);
 
         } while (!finished);
     }
 
-    private boolean inputHandler(String mySelection) {
+    private boolean guestHandler(String mySelection, Scanner scanner) {
         boolean done = false;
         switch (mySelection) {
             case "1":
@@ -43,6 +42,9 @@ public class StartMenu {
                 done = true;
                 break;
             case "5":
+                Portal portal = new Portal();
+                portal.show(scanner);
+                //Instert method to open Portal
                 done = true;
                 break;
             default:
