@@ -6,24 +6,19 @@ import java.sql.SQLOutput;
 
 public class Guest extends View{
 
-    public void show(Scanner scanner) {
-        Boolean finished = false;
-        String selection;
-        do {
-            System.out.println("\nChoose one of the following options and press enter:");
-            System.out.println("1 - Menu");
-            System.out.println("2 - Reserve a table");
-            System.out.println("3 - Login");
-            System.out.println("4 - Register");
-            System.out.println("5 - Back\n");
-
-            selection = scanner.next();
-
-            finished = guestHandler(selection, scanner);
-
-        } while (!finished);
+    public void show() {
+        System.out.println("\nChoose one of the following options and press enter:");
+        System.out.println("1 - Menu");
+        System.out.println("2 - Reserve a table");
+        System.out.println("3 - Login");
+        System.out.println("4 - Register");
+        System.out.println("5 - Back\n");
     }
 
+    public Guest(){
+        System.out.println("Guest View Created!");
+    }
+/*
     private boolean guestHandler(String mySelection, Scanner scanner) {
         boolean done = false;
         switch (mySelection) {
@@ -52,4 +47,5 @@ public class Guest extends View{
         }
         return done;
     }
+    */
 }

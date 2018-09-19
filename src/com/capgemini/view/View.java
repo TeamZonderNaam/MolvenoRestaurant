@@ -4,5 +4,5 @@ import java.util.Scanner;
 
 public abstract class View {
 
-    public abstract void show(Scanner scanner);
+    public abstract void show();
 }
