@@ -9,6 +9,7 @@ public class Reservation {
     private boolean parkingSpaceNeeded;
     private int numberOfChildSeats;
     private int numberOfPersons;
+    //dit zou eigenlijk een list moeten worden
     private Table reservedTable;
     private LocalDateTime startReservation;
     private int totalTimeInMinutes;
