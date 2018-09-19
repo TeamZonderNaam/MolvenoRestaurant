@@ -1,11 +1,12 @@
 package com.capgemini;
 
-import com.capgemini.service.MenuItemService;
+import com.capgemini.Controller.MenuController;
+import com.capgemini.Controller.MenuItemController;
 
 public class App {
     public static void main(String[] args) {
-        MenuItemService menuItemService = new MenuItemService();
-        menuItemService.addMenu();
-        menuItemService.addMoreItems();
+        MenuController menuController = new MenuController();
+        //menuController.addMenuItem();
+        menuController.checkMenuItems();
     }
 }
