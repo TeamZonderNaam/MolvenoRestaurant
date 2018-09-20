@@ -2,25 +2,35 @@ package com.capgemini.service;
 
 import com.capgemini.model.Order;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderService implements Service<Order> {
     private List<Order> orders;
 
+    //constructor
+    public OrderService() {
+        orders = new ArrayList<>();
+    }
+
     @Override
     public boolean add(Order item) {
+        orders.add(item);
         return true;
     }
 
     @Override
     public List<Order> get() {
-        return orders;
+        return this.orders;
     }
 
     @Override
     public Order get(int id) {
-        //see comment in TableServiceTest
-        return null;
+        if (id >= 0 && id < orders.size()) {
+            return orders.get(id);
+        } else {
+            return null;
+        }
     }
 
     @Override
@@ -41,8 +51,7 @@ public class OrderService implements Service<Order> {
         //check if ID falls within the range
         if (id >= 0 && id < orders.size()) {
             //in the example TableService this only returns a boolean, but it seems like nothing is deleted there?
-            orders.remove(id);
-            return true;
+            return orders.remove(id) != null;
         } else {
             return false;
         }

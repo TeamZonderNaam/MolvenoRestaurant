@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class OrderServiceTest {
     private OrderService service;
+
     private Order order1 = new Order();
     private Order order2 = new Order();
     private Order order3 = new Order();
@@ -30,18 +31,24 @@ public class OrderServiceTest {
         List<Order> orders = service.get();
         assertEquals(3, orders.size());
 
-        assertSame(orders.get(0), order1);
-        assertSame(orders.get(1), order2);
-        assertSame(orders.get(2), order3);
-
+        assertSame(order1, orders.get(0));
+        assertSame(order2, orders.get(1));
+        assertSame(order3, orders.get(2));
 
     }
 
     @Test
     public void getId() {
+        service.add(order1);
+        service.add(order2);
+        service.add(order3);
 
-        //I did not understand yet what exactly the ID should be. I assumed it would be the number of the order, but I
-        // looked at the test definition in TableServiceTest but it seems to be the same test as for the get-method
+        assertSame(order1, service.get(0));
+        assertSame(order2, service.get(1));
+        assertSame(order3, service.get(2));
+
+        assertNull(service.get(3));
+        assertNull(service.get(-1));
 
     }
 
@@ -63,11 +70,10 @@ public class OrderServiceTest {
 
         service.update(0, fakeOrder);
 
-        assertSame(service.get(0), fakeOrder);
+        assertSame(fakeOrder, service.get(0));
 
         assertNull(service.update(4, fakeOrder));
         assertNull(service.update(-1, fakeOrder));
-
 
     }
 
@@ -79,16 +85,13 @@ public class OrderServiceTest {
 
         service.delete(0);
 
-        assertSame(service.get(0), order2);
-        assertSame(service.get(1), order3);
+        assertSame(order2, service.get(0));
+        assertSame(order3, service.get(1));
 
         assertEquals(2, service.get().size());
 
         assertNull(service.get(3));
         assertNull(service.get(-1));
-
-
-
 
     }
 }
