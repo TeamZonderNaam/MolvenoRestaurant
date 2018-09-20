@@ -7,7 +7,7 @@ public class MenuView extends View {
     public String stringDisplay() {
         String returnString = "";
         returnString +=
-                "\nMENU"
+                "\nMenu Page"
                         +"\n1 - Pizza"
                         +"\n2 - Lasagna";
         return returnString;

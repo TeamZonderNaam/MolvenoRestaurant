@@ -1,7 +1,6 @@
 package com.capgemini.view;
 
 public class WindowTest {
-    //TestData
 
-
+    View welcomeView = new WelcomeView();
 }
