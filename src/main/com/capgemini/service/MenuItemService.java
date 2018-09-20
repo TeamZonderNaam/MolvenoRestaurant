@@ -6,6 +6,8 @@ import com.capgemini.model.Table;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.List;
+
 public class MenuItemService implements Service<MenuItem> {
     private ArrayList<MenuItem> menuItemsList = new ArrayList<>();
 
@@ -47,5 +49,25 @@ public class MenuItemService implements Service<MenuItem> {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public List<MenuItem> get() {
+        return null;
+    }
+
+    @Override
+    public MenuItem get(int id) {
+        return null;
+    }
+
+    @Override
+    public MenuItem update(int id, MenuItem item) {
+        return null;
+    }
+
+    @Override
+    public boolean delete(int id) {
+        return false;
     }
 }
