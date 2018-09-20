@@ -1,8 +1,5 @@
 package com.capgemini.service;
 
-import com.capgemini.model.MenuItem;
-import com.capgemini.model.Table;
-
 import java.util.List;
 
 public interface Service<T> {
