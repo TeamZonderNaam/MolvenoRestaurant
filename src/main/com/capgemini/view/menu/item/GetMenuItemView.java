@@ -13,10 +13,6 @@ public class GetMenuItemView extends View {
 
     public GetMenuItemView(MenuItemService service) {
         this.service = service;
-
-        this.service.add(new MenuItem("Lorem", 10, 1));
-        this.service.add(new MenuItem("Ipsum", 12, 2));
-        this.service.add(new MenuItem("Doler", 13, 3));
     }
 
     @Override

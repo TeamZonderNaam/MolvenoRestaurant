@@ -15,7 +15,7 @@ public class MenuItemView extends View {
     public MenuItemView() {
         nextList.add(new GetMenuItemView(Window.menuItemService));
         nextList.add(new AddMenuItemView(Window.menuItemService));
-        nextList.add(new AddMenuItemView(Window.menuItemService));
+        nextList.add(new EditMenuItemView(Window.menuItemService));
         nextList.add(new DeleteMenuItemView(Window.menuItemService));
     }
 
@@ -43,7 +43,7 @@ public class MenuItemView extends View {
                 returnView = nextList.get(1);
                 break;
             case "3":
-                returnView = nextList.get(0);
+                returnView = nextList.get(2);
                 break;
             case "4":
                 returnView = nextList.get(3);
