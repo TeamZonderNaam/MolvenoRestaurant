@@ -24,11 +24,13 @@ public class AddTableView extends View {
         tableService.add(myTable);
     }
 
+    @Override
     public String stringDisplay() {
         addTable();
         return "\nThe table has been added.";
     }
 
+    @Override
     public View handler(String action) {
         return null;
     }

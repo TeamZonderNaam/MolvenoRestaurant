@@ -13,6 +13,8 @@ public class TableManagementView extends View {
     public TableManagementView() {
         tableManagementViewNextList.add(new DisplayTableView(myTableService));
         tableManagementViewNextList.add(new AddTableView(myTableService));
+        tableManagementViewNextList.add(new ModifyTableView(myTableService));
+        tableManagementViewNextList.add(new DeleteTableView(myTableService));
     }
 
     @Override
@@ -20,11 +22,11 @@ public class TableManagementView extends View {
         String returnString = "";
         returnString +=
                 "\nTable Management Page"
-                        +"\nPlease choose from these options:"
-                        +"\n1 - View tables"
-                        +"\n2 - Add a table"
-                        +"\n3 - Modify a table"
-                        +"\n4 - Delete a table";
+                +"\nPlease choose from these options:"
+                +"\n1 - View tables"
+                +"\n2 - Add a table"
+                +"\n3 - Modify a table"
+                +"\n4 - Delete a table";
         return returnString;
     }
 
@@ -37,6 +39,12 @@ public class TableManagementView extends View {
                 break;
             case "2":
                 returnView = tableManagementViewNextList.get(1);
+                break;
+            case "3":
+                returnView = tableManagementViewNextList.get(2);
+                break;
+            case "4":
+                returnView = tableManagementViewNextList.get(3);
                 break;
             default:
                 returnView = null;
