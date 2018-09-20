@@ -23,16 +23,29 @@ public class MenuItemService implements Service<MenuItem> {
 
     @Override
     public MenuItem get(int i) {
-        return null;
+        if (i >= 0 && i < menuItemsList.size()) {
+            return menuItemsList.get(i);
+        } else {
+            return null;
+        }
     }
 
     @Override
-    public MenuItem update(int i) {
-        return null;
+    public MenuItem update(int id, MenuItem item) {
+        if(id >= 0 && id < menuItemsList.size()){
+            menuItemsList.set(id, item);
+            return item;
+        }else{
+            return null;
+        }
     }
 
     @Override
-    public boolean delete(int i) {
-        return false;
+    public boolean delete(int id) {
+        if (id >= 0 && id < menuItemsList.size()) {
+            return menuItemsList.remove(id) != null;
+        } else {
+            return false;
+        }
     }
 }
