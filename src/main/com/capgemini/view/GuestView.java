@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GuestView extends View {
-    List<View> guestViewNextList = new ArrayList<View>();
+    private List<View> guestViewNextList = new ArrayList<View>();
 
     // Constructor
     public GuestView() {
