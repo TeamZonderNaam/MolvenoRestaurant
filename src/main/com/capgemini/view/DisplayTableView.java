@@ -26,7 +26,7 @@ public class DisplayTableView extends View {
         } else {
             int count = 1;
             for (Table table : myTables) {
-                returnString += "\nTable " + count + ": seats " + table.getNumberPersons();
+                returnString += "\nTable " + count + " - seats: " + table.getNumberPersons() + " - status: " + table.getStatus();
 
                 count++;
             }

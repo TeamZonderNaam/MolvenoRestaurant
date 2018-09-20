@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WelcomeView extends View {
-    List<View> welcomeViewNextList = new ArrayList<View>();
+    private List<View> welcomeViewNextList = new ArrayList<View>();
 
     // Constructor
     public WelcomeView() {
