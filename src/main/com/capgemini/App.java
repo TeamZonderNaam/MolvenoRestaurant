@@ -6,10 +6,6 @@ import com.capgemini.service.MenuItemService;
 
 public class App {
     public static void main(String[] args) {
-
-        MenuItemService menuItemService = new MenuItemService();
-        MenuController menuController = new MenuController(menuItemService);
-
-        menuController.choiceOfMenu();
+        System.out.println("Hallo");
     }
 }
