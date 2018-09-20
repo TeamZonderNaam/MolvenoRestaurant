@@ -1,5 +1,6 @@
 package com.capgemini.view;
 
+import com.capgemini.service.ReservationService;
 import com.capgemini.service.TableService;
 
 import java.util.Scanner;
@@ -8,6 +9,7 @@ import java.util.Stack;
 public class Window {
     // Instantiate the services
     public static TableService myTableService = new TableService();
+    public static ReservationService myReservationService = new ReservationService();
 
     public void start() {
         View currentView = new WelcomeView();

@@ -1,5 +1,6 @@
 package com.capgemini.view;
 
+import com.capgemini.model.Customer;
 import com.capgemini.model.Reservation;
 import com.capgemini.model.Table;
 import com.capgemini.model.TableStatus;
@@ -16,33 +17,43 @@ public class ReservationView extends View {
         this.tableService = tableService;
     }
 
-    private Reservation makeReservation() {
+    private void makeReservation() {
+        int numberOfPersons;
+        Customer customer = new Customer();
+        Reservation reservation = new Reservation();
+        Table reservedTable;
         System.out.println("\n For how many persons would you like to reserve?");
-        if (!checkAvailabilty(Integer.parseInt(scanner.next()))) {
-            System.out.println("\nNo tables available");
+        numberOfPersons = Integer.parseInt(scanner.next());
+        reservedTable = checkAvailabilty(numberOfPersons);
+        if (reservedTable==null) {
+            System.out.println("\nNo tables available.");
         } else {
-            System.out.println("\nThank you for your reservation");
+            System.out.println("\nWhat is your name?");
+            customer.setName(scanner.next());
+            reservation.setCustomer(customer);
+            reservation.setNumberOfPersons(numberOfPersons);
+            reservation.setReservedTable(reservedTable);
+            Window.myReservationService.add(reservation);
         }
-        return null;
     }
 
-    private boolean checkAvailabilty(int numberPersons) {
+    private Table checkAvailabilty(int numberPersons) {
         List<Table> tables = tableService.get();
-        boolean isAvailable = false;
+        Table returnTable = null;
         for(Table table : tables) {
             if (table.getStatus()== TableStatus.AVAILABLE) {
                 if (table.getNumberPersons() >= numberPersons) {
-                    isAvailable = true;
+                    returnTable = table;
                     break;
                 }
             }
         }
-        return isAvailable;
+        return returnTable;
     }
 
     public String stringDisplay() {
         makeReservation();
-        return "";
+        return "\nThank you for your reservation!";
     }
 
     public View handler(String action) {
