@@ -1,7 +1,8 @@
-package com.capgemini.view;
+package com.capgemini.view.driver;
 
 import com.capgemini.service.ReservationService;
 import com.capgemini.service.TableService;
+import com.capgemini.view.WelcomeView;
 
 import java.util.Scanner;
 import java.util.Stack;

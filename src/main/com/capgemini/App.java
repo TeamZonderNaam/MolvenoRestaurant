@@ -1,6 +1,6 @@
 package com.capgemini;
 
-import com.capgemini.view.Window;
+import com.capgemini.view.driver.Window;
 
 public class App {
     public static void main (String[] args) {

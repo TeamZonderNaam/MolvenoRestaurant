@@ -1,6 +1,6 @@
 package com.capgemini.view;
 
-import java.sql.SQLOutput;
+import com.capgemini.view.driver.View;
 
 public class MenuView extends View {
     @Override

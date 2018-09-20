@@ -1,6 +1,9 @@
-package com.capgemini.view;
+package com.capgemini.view.table;
 
-import com.capgemini.service.TableService;
+import com.capgemini.view.driver.View;
+import com.capgemini.view.driver.Window;
+import com.capgemini.view.table.AddTableView;
+import com.capgemini.view.table.DisplayTableView;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.capgemini.view;
+package com.capgemini.view.driver;
 
 public abstract class View {
     public abstract String stringDisplay();

@@ -5,6 +5,8 @@ import com.capgemini.model.Reservation;
 import com.capgemini.model.Table;
 import com.capgemini.model.TableStatus;
 import com.capgemini.service.TableService;
+import com.capgemini.view.driver.View;
+import com.capgemini.view.driver.Window;
 
 import java.util.List;
 import java.util.Scanner;
