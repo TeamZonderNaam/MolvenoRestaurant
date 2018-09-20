@@ -4,8 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeView extends View {
-    List<View> employeeViewNextList = new ArrayList<>();
-    //employeeViewNextList.add(new ReservationView);
+    private List<View> employeeViewNextList = new ArrayList<>();
+
+    //Constructor
+    public EmployeeView() {
+        employeeViewNextList.add(new TableManagementView());
+    }
 
     @Override
     public String stringDisplay() {
@@ -21,6 +25,15 @@ public class EmployeeView extends View {
     }
     @Override
     public View handler(String action) {
-        return null;
+        View returnView;
+
+        switch(action) {
+            case "4":
+                returnView = employeeViewNextList.get(0);
+                break;
+            default:
+                returnView = null;
+        }
+        return returnView;
     }
 }
