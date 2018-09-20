@@ -7,14 +7,9 @@ import com.capgemini.service.TableService;
 import java.util.List;
 
 public class DisplayTableView extends View {
-    private TableService tableService = new TableService();
-
-    public DisplayTableView(TableService tableService) {
-        this.tableService = tableService;
-    }
 
     public List<Table> getTables() {
-        return tableService.get();
+        return Window.myTableService.get();
     }
 
     @Override

@@ -8,16 +8,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ModifyTableView extends View {
-    private TableService tableService = new TableService();
     private Scanner myScanner = new Scanner(System.in);
     private Table myTable;
 
-    public ModifyTableView(TableService tableService) {
-        this.tableService = tableService;
-    }
 
     public List<Table> getTables() {
-        return tableService.get();
+        return Window.myTableService.get();
     }
 
     @Override
@@ -59,6 +55,6 @@ public class ModifyTableView extends View {
         numberPersons = Integer.parseInt(myScanner.next());
 
         myTable = new Table(TableStatus.AVAILABLE, numberPersons);
-        tableService.update(tableToModifyIndex, myTable);
+        Window.myTableService.update(tableToModifyIndex, myTable);
     }
 }

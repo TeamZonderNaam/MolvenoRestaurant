@@ -8,16 +8,12 @@ import java.util.List;
 import java.util.Scanner;
 
 public class DeleteTableView extends View {
-    private TableService tableService = new TableService();
     private Scanner myScanner = new Scanner(System.in);
     private Table myTable;
 
-    public DeleteTableView(TableService tableService) {
-        this.tableService = tableService;
-    }
 
     public List<Table> getTables() {
-        return tableService.get();
+        return Window.myTableService.get();
     }
 
     @Override
@@ -38,6 +34,6 @@ public class DeleteTableView extends View {
         System.out.println("\nWhich table do you want to delete?");
         tableToModifyIndex = Integer.parseInt(myScanner.next());
         tableToModifyIndex--;
-        tableService.delete(tableToModifyIndex);
+        Window.myTableService.delete(tableToModifyIndex);
     }
 }

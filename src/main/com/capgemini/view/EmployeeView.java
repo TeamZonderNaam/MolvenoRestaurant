@@ -8,6 +8,8 @@ public class EmployeeView extends View {
 
     //Constructor
     public EmployeeView() {
+
+        employeeViewNextList.add(new ReservationManagementView());
         employeeViewNextList.add(new TableManagementView());
     }
 
@@ -28,8 +30,11 @@ public class EmployeeView extends View {
         View returnView;
 
         switch(action) {
-            case "4":
+            case "3":
                 returnView = employeeViewNextList.get(0);
+                break;
+            case "4":
+                returnView = employeeViewNextList.get(1);
                 break;
             default:
                 returnView = null;
