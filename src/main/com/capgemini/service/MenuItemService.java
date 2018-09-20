@@ -50,24 +50,4 @@ public class MenuItemService implements Service<MenuItem> {
             return false;
         }
     }
-
-    @Override
-    public List<MenuItem> get() {
-        return null;
-    }
-
-    @Override
-    public MenuItem get(int id) {
-        return null;
-    }
-
-    @Override
-    public MenuItem update(int id, MenuItem item) {
-        return null;
-    }
-
-    @Override
-    public boolean delete(int id) {
-        return false;
-    }
 }
