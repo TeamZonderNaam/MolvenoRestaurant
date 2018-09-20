@@ -6,9 +6,9 @@ import java.util.List;
 public class Order {
     private List<MenuItem> items;
     private Table table;
-    //it would be ideal if you could set this property for every individual item of the order
+    //it would be ideal if you could set this property for every individual order of the order
     private boolean prepared;
-    //this variable should be composed of the separate prices of every menu-item
+    //this variable should be composed of the separate prices of every menu-order
     private int totalPrice;
 
     //define a constructor that automatically makes an arraylist when making a new Order
@@ -25,7 +25,7 @@ public class Order {
     }
 
     public double getPrice() {
-        int price = 0;
+        double price = 0;
         for (MenuItem i : items) {
             price = price + i.getPrice();
         }

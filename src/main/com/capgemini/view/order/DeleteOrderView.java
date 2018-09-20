@@ -1,27 +1,28 @@
-package com.capgemini.view.menu.item;
+package com.capgemini.view.order;
 
 import com.capgemini.model.MenuItem;
+import com.capgemini.model.Order;
 import com.capgemini.service.MenuItemService;
+import com.capgemini.service.OrderService;
 import com.capgemini.view.driver.View;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class DeleteMenuItemView extends View {
-    private MenuItemService service;
+public class DeleteOrderView extends View {
+    private OrderService service;
 
-    public DeleteMenuItemView(MenuItemService service) {
+    public DeleteOrderView(OrderService service) {
         this.service = service;
     }
 
     @Override
     public String stringDisplay() {
         String msg = "\nWhich order should be removed?";
-
-        List<MenuItem> arr = service.get();
-        for (int i = 0; i < arr.size(); i ++) {
-            MenuItem item = arr.get(i);
-            msg += "\n"+(i+1)+" - "+item.getName();
+        List<Order> orders = service.get();
+        for (int i = 0; i < orders.size(); i ++) {
+            Order order = orders.get(i);
+            msg += "\n"+(i+1)+" - Order for table "+order.getTable().getNumber() +", total price: ¥"+order.getPrice();
         }
 
         msg += "\n";

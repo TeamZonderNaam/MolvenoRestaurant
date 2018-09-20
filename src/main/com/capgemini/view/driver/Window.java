@@ -1,6 +1,7 @@
 package com.capgemini.view.driver;
 
 import com.capgemini.service.MenuItemService;
+import com.capgemini.service.OrderService;
 import com.capgemini.service.ReservationService;
 import com.capgemini.service.TableService;
 import com.capgemini.view.WelcomeView;
@@ -14,6 +15,7 @@ public class Window {
     public static ReservationService myReservationService = new ReservationService();
 
     public static MenuItemService menuItemService = new MenuItemService();
+    public static OrderService orderService = new OrderService();
 
     public void start() {
         View currentView = new WelcomeView();

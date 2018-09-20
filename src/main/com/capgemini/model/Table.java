@@ -1,6 +1,7 @@
 package com.capgemini.model;
 
 public class Table {
+    private int number;
 
     private int numberPersons;
     private TableStatus status;
@@ -14,6 +15,12 @@ public class Table {
   
   
     public Table(TableStatus status, int numberPersons) {
+        this.status = status;
+        this.numberPersons = numberPersons;
+    }
+
+    public Table(int number, TableStatus status, int numberPersons) {
+        this.number = number;
         this.status = status;
         this.numberPersons = numberPersons;
     }
@@ -58,5 +65,13 @@ public class Table {
         if (reservation.getReservedTable() != this) {
             reservation.setReservedTable(this);
         }
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 }
