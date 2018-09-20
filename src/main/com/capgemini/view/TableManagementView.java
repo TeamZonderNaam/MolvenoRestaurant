@@ -7,12 +7,11 @@ import java.util.List;
 
 public class TableManagementView extends View {
     private List<View> tableManagementViewNextList = new ArrayList<View>();
-    private TableService myTableService = new TableService();
 
     // Constructor
     public TableManagementView() {
-        tableManagementViewNextList.add(new DisplayTableView(myTableService));
-        tableManagementViewNextList.add(new AddTableView(myTableService));
+        tableManagementViewNextList.add(new DisplayTableView(Window.myTableService));
+        tableManagementViewNextList.add(new AddTableView(Window.myTableService));
     }
 
     @Override

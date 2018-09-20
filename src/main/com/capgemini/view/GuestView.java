@@ -9,6 +9,7 @@ public class GuestView extends View {
     // Constructor
     public GuestView() {
         guestViewNextList.add(new MenuView());
+        guestViewNextList.add(new ReservationView(Window.myTableService));
     }
 
     @Override
@@ -38,7 +39,7 @@ public class GuestView extends View {
                 returnView = null;
                 break;
             case "4":
-                returnView = null;
+                returnView = guestViewNextList.get(1);
                 break;
             case "5":
                 returnView = null;
