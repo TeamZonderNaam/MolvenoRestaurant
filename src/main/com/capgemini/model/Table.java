@@ -11,8 +11,7 @@ public class Table {
         this.numberPersons = numberPersons;
     }
 
-    //reserveringsfunctie maken
-
+    //reserveringsfunctie maken: als er een reservering aan de tafel is gekoppeld verandert deze functie de status van available naar booked
     //zou dit beter zijn met .isempty() ipv null?
 
     public TableStatus getStatus() {
@@ -48,5 +47,8 @@ public class Table {
 
     public void setReservation(Reservation reservation) {
         this.reservation = reservation;
+        if (reservation.getReservedTable() != this) {
+            reservation.setReservedTable(this);
+        }
     }
 }
