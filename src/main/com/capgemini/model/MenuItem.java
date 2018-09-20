@@ -3,10 +3,10 @@ package com.capgemini.model;
 public class MenuItem {
 
     private String name;
-    private int price;
+    private double price;
     private int number;
 
-    public MenuItem(String name, int price, int number) {
+    public MenuItem(String name, double price, int number) {
         this.name = name;
         this.price = price;
         this.number = number;
@@ -25,11 +25,11 @@ public class MenuItem {
         this.name = name;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
