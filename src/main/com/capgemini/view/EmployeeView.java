@@ -1,6 +1,7 @@
 package com.capgemini.view;
 
 import com.capgemini.view.driver.View;
+import com.capgemini.view.menu.item.MenuItemView;
 import com.capgemini.view.table.TableManagementView;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ public class EmployeeView extends View {
 
     //Constructor
     public EmployeeView() {
+        employeeViewNextList.add(new MenuItemView());
         employeeViewNextList.add(new TableManagementView());
     }
 
@@ -31,8 +33,11 @@ public class EmployeeView extends View {
         View returnView;
 
         switch(action) {
-            case "4":
+            case "1":
                 returnView = employeeViewNextList.get(0);
+                break;
+            case "4":
+                returnView = employeeViewNextList.get(1);
                 break;
             default:
                 returnView = null;
