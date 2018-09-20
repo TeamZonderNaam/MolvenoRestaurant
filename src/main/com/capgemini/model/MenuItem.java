@@ -3,13 +3,18 @@ package com.capgemini.model;
 public class MenuItem {
 
     private String name;
-    private double price;
+    private int price;
     private int number;
 
-    public MenuItem(String name, double price, int number) {
+    public MenuItem(String name, int price, int number) {
         this.name = name;
         this.price = price;
         this.number = number;
+    }
+
+    //empty constructor for easy constructing of menu items
+    public MenuItem() {
+
     }
 
     public String getName() {
@@ -20,7 +25,7 @@ public class MenuItem {
         this.name = name;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
