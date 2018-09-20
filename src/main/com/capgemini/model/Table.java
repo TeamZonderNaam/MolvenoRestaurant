@@ -11,11 +11,13 @@ public class Table {
         this.numberPersons = numberPersons;
         this.status = TableStatus.AVAILABLE;
     }
-
+  
+  
     public Table(TableStatus status, int numberPersons) {
         this.status = status;
         this.numberPersons = numberPersons;
     }
+
 
     //reserveringsfunctie maken
 
