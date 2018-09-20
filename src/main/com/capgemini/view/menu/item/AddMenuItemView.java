@@ -11,17 +11,17 @@ import java.util.Scanner;
 
 public class AddMenuItemView extends View {
     private MenuItemService service;
-
-    private Scanner scanner = new Scanner(System.in);
-    private int state = 0;
+    private boolean sec = false;
 
     public AddMenuItemView(MenuItemService service) {
         this.service = service;
     }
 
     private void addItem() {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.print("Enter name: ");
-        String name = scanner.next();
+        String name = scanner.nextLine();
 
         System.out.print("Enter price: ");
         double price = scanner.nextDouble();
@@ -30,6 +30,9 @@ public class AddMenuItemView extends View {
         int number = scanner.nextInt();
 
         MenuItem item = new MenuItem(name, price, number);
+        service.add(item);
+
+        sec = true;
     }
 
     public String stringDisplay() {
