@@ -6,6 +6,9 @@ import com.capgemini.service.ReservationService;
 import com.capgemini.service.TableService;
 import com.capgemini.view.WelcomeView;
 
+import com.capgemini.service.ReservationService;
+import com.capgemini.service.TableService;
+
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -13,7 +16,6 @@ public class Window {
     // Instantiate the services
     public static TableService myTableService = new TableService();
     public static ReservationService myReservationService = new ReservationService();
-
     public static MenuItemService menuItemService = new MenuItemService();
     public static OrderService orderService = new OrderService();
 

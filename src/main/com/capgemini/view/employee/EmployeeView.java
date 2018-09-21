@@ -1,13 +1,14 @@
-package com.capgemini.view;
+package com.capgemini.view.employee;
 
 import com.capgemini.model.MenuItem;
 import com.capgemini.model.Table;
 import com.capgemini.model.TableStatus;
 import com.capgemini.view.driver.View;
 import com.capgemini.view.driver.Window;
-import com.capgemini.view.menu.item.MenuItemView;
-import com.capgemini.view.order.OrderView;
-import com.capgemini.view.table.TableManagementView;
+import com.capgemini.view.employee.item.MenuItemView;
+import com.capgemini.view.employee.order.OrderView;
+import com.capgemini.view.employee.reservation.ReservationManagementView;
+import com.capgemini.view.employee.table.TableManagementView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ public class EmployeeView extends View {
 
     //Constructor
     public EmployeeView() {
+
         // Mock some items
         Window.menuItemService.add(new MenuItem("Lorem", 2.0, 1));
         Window.menuItemService.add(new MenuItem("Ipsum", 5.0, 2));
@@ -31,6 +33,7 @@ public class EmployeeView extends View {
 
         employeeViewNextList.add(new MenuItemView());
         employeeViewNextList.add(new OrderView());
+        employeeViewNextList.add(new ReservationManagementView());
         employeeViewNextList.add(new TableManagementView());
     }
 
@@ -57,8 +60,11 @@ public class EmployeeView extends View {
             case "2":
                 returnView = employeeViewNextList.get(1);
                 break;
-            case "4":
+            case "3":
                 returnView = employeeViewNextList.get(2);
+                break;
+            case "4":
+                returnView = employeeViewNextList.get(3);
                 break;
             default:
                 returnView = null;

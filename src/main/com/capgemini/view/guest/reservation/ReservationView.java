@@ -1,4 +1,4 @@
-package com.capgemini.view;
+package com.capgemini.view.guest.reservation;
 
 import com.capgemini.model.Customer;
 import com.capgemini.model.Reservation;
