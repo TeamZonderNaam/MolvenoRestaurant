@@ -7,6 +7,7 @@ import com.capgemini.view.driver.View;
 import com.capgemini.view.driver.Window;
 import com.capgemini.view.menu.item.MenuItemView;
 import com.capgemini.view.order.OrderView;
+import com.capgemini.view.reservation.ReservationManagementView;
 import com.capgemini.view.table.TableManagementView;
 
 import java.util.ArrayList;
@@ -18,7 +19,6 @@ public class EmployeeView extends View {
     //Constructor
     public EmployeeView() {
 
-        employeeViewNextList.add(new ReservationManagementView());
         // Mock some items
         Window.menuItemService.add(new MenuItem("Lorem", 2.0, 1));
         Window.menuItemService.add(new MenuItem("Ipsum", 5.0, 2));
@@ -33,6 +33,7 @@ public class EmployeeView extends View {
 
         employeeViewNextList.add(new MenuItemView());
         employeeViewNextList.add(new OrderView());
+        employeeViewNextList.add(new ReservationManagementView());
         employeeViewNextList.add(new TableManagementView());
     }
 

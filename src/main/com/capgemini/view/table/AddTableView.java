@@ -1,11 +1,10 @@
 package com.capgemini.view.table;
 
 import java.util.Scanner;
-
 import com.capgemini.model.Table;
 import com.capgemini.model.TableStatus;
-import com.capgemini.service.TableService;
 import com.capgemini.view.driver.View;
+import com.capgemini.view.driver.Window;
 
 public class AddTableView extends View {
     private Scanner scanner = new Scanner(System.in);

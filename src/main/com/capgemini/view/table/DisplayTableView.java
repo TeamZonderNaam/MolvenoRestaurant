@@ -1,8 +1,8 @@
 package com.capgemini.view.table;
 
 import com.capgemini.model.Table;
-import com.capgemini.service.TableService;
 import com.capgemini.view.driver.View;
+import com.capgemini.view.driver.Window;
 
 import java.util.List;
 
