@@ -1,14 +1,14 @@
-package com.capgemini.view;
+package com.capgemini.view.employee;
 
 import com.capgemini.model.MenuItem;
 import com.capgemini.model.Table;
 import com.capgemini.model.TableStatus;
 import com.capgemini.view.driver.View;
 import com.capgemini.view.driver.Window;
-import com.capgemini.view.menu.item.MenuItemView;
-import com.capgemini.view.order.OrderView;
-import com.capgemini.view.reservation.ReservationManagementView;
-import com.capgemini.view.table.TableManagementView;
+import com.capgemini.view.employee.item.MenuItemView;
+import com.capgemini.view.employee.order.OrderView;
+import com.capgemini.view.employee.reservation.ReservationManagementView;
+import com.capgemini.view.employee.table.TableManagementView;
 
 import java.util.ArrayList;
 import java.util.List;

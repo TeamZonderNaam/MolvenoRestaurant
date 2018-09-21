@@ -1,4 +1,4 @@
-package com.capgemini.view.table;
+package com.capgemini.view.employee.table;
 
 import com.capgemini.model.Table;
 import com.capgemini.view.driver.View;

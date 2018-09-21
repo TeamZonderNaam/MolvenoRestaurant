@@ -1,6 +1,8 @@
 package com.capgemini.view;
 
 import com.capgemini.view.driver.View;
+import com.capgemini.view.employee.EmployeeView;
+import com.capgemini.view.guest.GuestView;
 
 import java.util.ArrayList;
 import java.util.List;

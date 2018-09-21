@@ -1,4 +1,4 @@
-package com.capgemini.view;
+package com.capgemini.view.guest.menu;
 
 import com.capgemini.view.driver.View;
 

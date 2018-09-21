@@ -1,8 +1,10 @@
-package com.capgemini.view;
+package com.capgemini.view.guest;
 
 import com.capgemini.view.driver.View;
 import com.capgemini.view.driver.Window;
-import com.capgemini.view.reservation.ReservationView;
+import com.capgemini.view.guest.menu.MenuView;
+import com.capgemini.view.guest.reservation.ReservationView;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +15,7 @@ public class GuestView extends View {
     // Constructor
     public GuestView() {
         guestViewNextList.add(new MenuView());
-        guestViewNextList.add(new ReservationView());
+        guestViewNextList.add(new ReservationView(Window.myTableService));
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.capgemini.view.table;
+package com.capgemini.view.employee.table;
 
 import java.util.Scanner;
 import com.capgemini.model.Table;
