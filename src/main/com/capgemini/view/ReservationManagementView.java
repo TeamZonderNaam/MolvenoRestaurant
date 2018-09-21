@@ -15,7 +15,7 @@ public class ReservationManagementView extends View{
         reservationManagementViewNextList.add(new DisplayReservationView());
         reservationManagementViewNextList.add(new AddReservationView());
         reservationManagementViewNextList.add(new ModifyReservationView());
-        //reservationManagementViewNextList.add(new DeleteReservationView(myReservationService));
+        reservationManagementViewNextList.add(new DeleteReservationView());
     }
     @Override
     public String stringDisplay() {
@@ -43,9 +43,9 @@ public class ReservationManagementView extends View{
             case "3":
                 returnView = reservationManagementViewNextList.get(2);
                 break;
-            //case "4":
-            //    returnView = reservationManagementViewNextList.get(3);
-            //    break;
+            case "4":
+                returnView = reservationManagementViewNextList.get(3);
+                break;
             default:
                 returnView = null;
         }

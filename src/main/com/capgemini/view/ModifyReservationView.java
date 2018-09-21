@@ -1,6 +1,10 @@
 package com.capgemini.view;
 
+import com.capgemini.model.Customer;
 import com.capgemini.model.Reservation;
+import com.capgemini.model.Table;
+import com.capgemini.model.TableStatus;
+
 import java.util.List;
 import java.util.Scanner;
 
@@ -32,8 +36,7 @@ public class ModifyReservationView extends View{
         } else {
             int count = 1;
             for (Reservation reservation : myReservation) {
-                returnString += "\nReservation " + count + ": people " + reservation.getNumberOfPersons();
-
+                returnString += "\nReservation " + count + ": Name " + reservation.getCustomer().getName() + ": attending " + reservation.getNumberOfPersons();
                 count++;
             }
         }
@@ -43,7 +46,28 @@ public class ModifyReservationView extends View{
     public void modifyReservationView(){
         int reservationToModifyIndex;
         int numberPersons;
-        System.out.println("\nWhich table do you want to modify?");
+        String customerName;
+        System.out.println("\nWhich reservation do you want to modify?");
+        reservationToModifyIndex = Integer.parseInt(myScanner.next());
+        reservationToModifyIndex--;
+
+        System.out.println("\nHow many people are going to attend?");
+        numberPersons = Integer.parseInt(myScanner.next());
+
+        System.out.println("\nOn which name is the reservation under");
+        customerName = myScanner.next();
+
+        Reservation reservation = new Reservation();
+        Customer customer = new Customer();
+
+        Table reservedTable;
+        reservedTable = AddReservationView.checkAvailability(numberPersons);
+
+        customer.setName(customerName);
+        reservation.setCustomer(customer);
+        reservation.setNumberOfPersons(numberPersons);
+        reservation.setReservedTable(reservedTable);
+        Window.myReservationService.update(reservationToModifyIndex, reservation);
     }
 }
 

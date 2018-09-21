@@ -38,7 +38,7 @@ public class AddReservationView extends View {
         }
     }
 
-    private Table checkAvailability(int numberPersons){
+    static Table checkAvailability(int numberPersons){
         List<Table> tables = Window.myTableService.get();
         Table returnTable = null;
         for(Table table : tables){
