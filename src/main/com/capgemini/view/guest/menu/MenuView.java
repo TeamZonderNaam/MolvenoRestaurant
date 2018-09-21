@@ -13,6 +13,7 @@ public class MenuView extends View {
         this.service = service;
     }
 
+    //this code is now double, try to make it into one single method (implement GetMenuItemView?)
     @Override
     public String stringDisplay() {
         String msg = "\nShowing all items";

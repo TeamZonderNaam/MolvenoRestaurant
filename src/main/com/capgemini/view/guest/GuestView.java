@@ -28,8 +28,7 @@ public class GuestView extends View {
                         +"\n1 - Menu"
                         +"\n2 - Register"
                         +"\n3 - Login"
-                        +"\n4 - Reserve a table"
-                        +"\n5 - Previous page";
+                        +"\n4 - Reserve a table";
         return returnString;
     }
     @Override
@@ -47,9 +46,6 @@ public class GuestView extends View {
                 break;
             case "4":
                 returnView = guestViewNextList.get(1);
-                break;
-            case "5":
-                returnView = null;
                 break;
             default:
                 System.out.println("\nInvalid choice, please try again.");
