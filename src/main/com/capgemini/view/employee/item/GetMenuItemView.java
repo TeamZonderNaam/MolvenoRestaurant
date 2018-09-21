@@ -20,7 +20,7 @@ public class GetMenuItemView extends View {
         List<MenuItem> arr = service.get();
         for (int i = 0; i < arr.size(); i ++) {
             MenuItem item = arr.get(i);
-            msg += "\n"+(i+1)+" - View: "+item.getName();
+            msg += "\n"+(i+1)+" - "+item.getName() + " ------- Price ¥" + item.getPrice() + " ------- Number " + item.getNumber();
         }
 
         msg += "\n";
