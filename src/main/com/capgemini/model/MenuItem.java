@@ -12,6 +12,11 @@ public class MenuItem {
         this.number = number;
     }
 
+    //empty constructor for easy constructing of menu items
+    public MenuItem() {
+
+    }
+
     public String getName() {
         return name;
     }
@@ -24,7 +29,7 @@ public class MenuItem {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 

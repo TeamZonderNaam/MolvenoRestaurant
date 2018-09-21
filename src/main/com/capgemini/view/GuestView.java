@@ -1,5 +1,8 @@
 package com.capgemini.view;
 
+import com.capgemini.view.driver.View;
+import com.capgemini.view.driver.Window;
+
 import java.util.ArrayList;
 import java.util.List;
 

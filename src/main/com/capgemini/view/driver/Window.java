@@ -1,4 +1,10 @@
-package com.capgemini.view;
+package com.capgemini.view.driver;
+
+import com.capgemini.service.MenuItemService;
+import com.capgemini.service.OrderService;
+import com.capgemini.service.ReservationService;
+import com.capgemini.service.TableService;
+import com.capgemini.view.WelcomeView;
 
 import com.capgemini.service.ReservationService;
 import com.capgemini.service.TableService;
@@ -10,6 +16,8 @@ public class Window {
     // Instantiate the services
     public static TableService myTableService = new TableService();
     public static ReservationService myReservationService = new ReservationService();
+    public static MenuItemService menuItemService = new MenuItemService();
+    public static OrderService orderService = new OrderService();
 
     public void start() {
         View currentView = new WelcomeView();
@@ -29,7 +37,7 @@ public class Window {
                     +"\nOption:";
 
             System.out.println(viewDisplay);
-            selection = myScanner.next();
+            selection = myScanner.nextLine();
 
             if (!previousPages.isEmpty()&&(selection.toLowerCase().equals("b"))) {
                 currentView = previousPages.pop();
