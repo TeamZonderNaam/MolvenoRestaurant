@@ -36,6 +36,7 @@ public class ReservationView extends View {
             reservation.setNumberOfPersons(numberOfPersons);
             reservation.setReservedTable(reservedTable);
             Window.myReservationService.add(reservation);
+            System.out.println("\nThank you for your reservation!");
         }
     }
 
@@ -55,7 +56,7 @@ public class ReservationView extends View {
 
     public String stringDisplay() {
         makeReservation();
-        return "\nThank you for your reservation!";
+        return "\nYou can now go back or exit";
     }
 
     public View handler(String action) {
