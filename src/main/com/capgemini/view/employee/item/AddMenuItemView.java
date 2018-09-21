@@ -31,7 +31,7 @@ public class AddMenuItemView extends View {
 
     public String stringDisplay() {
         addItem();
-        return "\nThe menu order has been added.";
+        return "\nThe menu item has been added.";
     }
 
     public View handler(String action) {

@@ -16,7 +16,7 @@ public class DeleteMenuItemView extends View {
 
     @Override
     public String stringDisplay() {
-        String msg = "\nWhich order should be removed?";
+        String msg = "\nWhich item should be removed?";
 
         List<MenuItem> arr = service.get();
         for (int i = 0; i < arr.size(); i ++) {
@@ -28,12 +28,12 @@ public class DeleteMenuItemView extends View {
         System.out.println(msg);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Number of order to be removed: ");
+        System.out.print("Number of item to be removed: ");
 
         int id = scanner.nextInt();
         service.delete(id - 1);
 
-        msg = "\nSuccessfully deleted order";
+        msg = "\nSuccessfully deleted item";
         return msg;
     }
 
