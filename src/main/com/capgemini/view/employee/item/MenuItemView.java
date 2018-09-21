@@ -24,9 +24,9 @@ public class MenuItemView extends View {
                 "\nMenu Item Management Page"
                         +"\nPlease choose from these options:"
                         +"\n1 - View menu items"
-                        +"\n2 - Add a menu order"
-                        +"\n3 - Modify a menu order"
-                        +"\n4 - Delete a menu order";
+                        +"\n2 - Add a menu item"
+                        +"\n3 - Modify a menu item"
+                        +"\n4 - Delete a menu item";
         return returnString;
     }
 
