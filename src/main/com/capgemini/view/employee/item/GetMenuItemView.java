@@ -18,9 +18,12 @@ public class GetMenuItemView extends View {
         String msg = "\nShowing all items";
 
         List<MenuItem> arr = service.get();
+        if (arr.isEmpty()) {
+            msg = "No items on the menu";
+        }
         for (int i = 0; i < arr.size(); i ++) {
             MenuItem item = arr.get(i);
-            msg += "\n"+(i+1)+" - View: "+item.getName();
+            msg += "\n"+(i+1)+" - "+item.getName() + " ------- Price ¥" + item.getPrice() + " ------- Number " + item.getNumber();
         }
 
         msg += "\n";

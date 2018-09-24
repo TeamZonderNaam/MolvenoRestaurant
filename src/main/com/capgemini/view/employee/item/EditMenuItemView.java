@@ -51,12 +51,12 @@ public class EditMenuItemView extends View {
         System.out.println(msg);
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter order to change: ");
+        System.out.print("Enter item to change: ");
 
         int id = scanner.nextInt() - 1;
         editItem(id);
 
-        return "\nThe menu order has been added.";
+        return "\nThe menu item has been added.";
     }
 
     public View handler(String action) {

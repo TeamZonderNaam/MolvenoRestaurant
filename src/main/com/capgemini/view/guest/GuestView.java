@@ -2,6 +2,7 @@ package com.capgemini.view.guest;
 
 import com.capgemini.view.driver.View;
 import com.capgemini.view.driver.Window;
+import com.capgemini.view.employee.item.GetMenuItemView;
 import com.capgemini.view.guest.menu.MenuView;
 import com.capgemini.view.guest.reservation.ReservationView;
 
@@ -14,7 +15,7 @@ public class GuestView extends View {
 
     // Constructor
     public GuestView() {
-        guestViewNextList.add(new MenuView());
+        guestViewNextList.add(new MenuView(Window.menuItemService));
         guestViewNextList.add(new ReservationView(Window.myTableService));
     }
 
@@ -27,8 +28,7 @@ public class GuestView extends View {
                         +"\n1 - Menu"
                         +"\n2 - Register"
                         +"\n3 - Login"
-                        +"\n4 - Reserve a table"
-                        +"\n5 - Previous page";
+                        +"\n4 - Reserve a table";
         return returnString;
     }
     @Override
@@ -46,9 +46,6 @@ public class GuestView extends View {
                 break;
             case "4":
                 returnView = guestViewNextList.get(1);
-                break;
-            case "5":
-                returnView = null;
                 break;
             default:
                 System.out.println("\nInvalid choice, please try again.");
